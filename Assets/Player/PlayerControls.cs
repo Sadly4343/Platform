@@ -6,13 +6,21 @@ public class PlayerControls : MonoBehaviour
 {
     public PlayerMovement playerMovement;
 
-
+    public Vector3 respawnPoint;
     // Start is called before the first frame update
     void Start()
     {
+        respawnPoint = transform.position;
         if (playerMovement == null)
         {
             playerMovement = GetComponent<PlayerMovement>();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Checkpoint"))
+        {
+            respawnPoint = other.transform.position;
         }
     }
 

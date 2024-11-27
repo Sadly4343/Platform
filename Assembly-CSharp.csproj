@@ -65,11 +65,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ProjectileMovement.cs" />
-    <Compile Include="Assets\PlayerControls.cs" />
-    <Compile Include="Assets\PlayerMovement.cs" />
+    <Compile Include="Assets\Player\PlayerControls.cs" />
     <Compile Include="Assets\CameraFollow.cs" />
-    <Compile Include="Assets\PlayerHealth.cs" />
+    <Compile Include="Assets\Enemy\EnemyMovement.cs" />
+    <Compile Include="Assets\Checkpoint.cs" />
     <Compile Include="Assets\MovingPlatform.cs" />
+    <Compile Include="Assets\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Enemy\EnemyHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

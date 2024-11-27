@@ -7,10 +7,12 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     public int maxHealth = 100;
     private int currentHealth;
+    private PlayerControls playerControls;
     void Start()
     {
         currentHealth = maxHealth;
         Debug.Log("Health initialized to: " + currentHealth);
+        playerControls = GetComponent<PlayerControls>();
     }
 
     // Update is called once per frame
@@ -19,10 +21,6 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             HandleDeath();
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(10);
         }
     }
 
@@ -36,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
     }
     private void HandleDeath()
     {
-        Debug.Log("character has died");
+        transform.position = playerControls.respawnPoint;
+        currentHealth = 100;
     }
 }
