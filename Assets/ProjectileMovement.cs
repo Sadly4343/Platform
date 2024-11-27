@@ -7,7 +7,7 @@ public class TrapMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 10f;
-    public int damage = 20;
+    public int damage = 69;
     public Vector3 startPoint;
     public Vector3 endPoint;
 
