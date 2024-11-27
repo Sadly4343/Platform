@@ -2,27 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovemnt : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
-    public Transform pointA;
-    public Transform pointB;
-    public float speed = 5f;
+    public float moveSpeed = 1f;
+    public float attackRange = 1f;
+    public int damage = 10;
+    private bool isAttacking = false;
 
-    private Vector3 target;
+
+    private Transform player;
+    private Rigidbody2D rb;
+
     void Start()
     {
-        target = pointA.position;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, target) < 0.1f)
+        MoveTowardsPlayer();
+        if (Vector2.Distance(transform.position, player.position) <= attackRange && !isAttacking)
         {
-            target = target == pointA.position ? pointB.position : pointA.position;
+            StartCoroutine(Attack());
         }
+
+    }
+    void MoveTowardsPlayer()
+    {
+        Vector2 direction = (player.position - transform.position).normalized;
+        rb.velocity = direction * moveSpeed;
+    }
+    IEnumerator Attack()
+    {
+        isAttacking = true;
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(damage);
+        }
+        yield return new WaitForSeconds(1f);
+
+        isAttacking = false;
 
     }
 }

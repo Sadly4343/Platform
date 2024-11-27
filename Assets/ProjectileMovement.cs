@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class ProjectileMovement : MonoBehaviour
+public class TrapMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 10f;
