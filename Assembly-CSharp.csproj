@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ProjectileMovement.cs" />
+    <Compile Include="Assets\Goal.cs" />
     <Compile Include="Assets\Player\PlayerControls.cs" />
     <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\Enemy\EnemyMovement.cs" />
