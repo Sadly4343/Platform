@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Health values.
     public int maxHealth = 100;
     private int currentHealth;
+    //Calls the Player Controls Class.
     private PlayerControls playerControls;
+    // Sets values and gets component PlayerControls.
     void Start()
     {
         currentHealth = maxHealth;
-        Debug.Log("Health initialized to: " + currentHealth);
         playerControls = GetComponent<PlayerControls>();
     }
 
-    // Update is called once per frame
+    // If health is <= 0 cause player death by calling HandleDeath function.
     void Update()
     {
         if (currentHealth <= 0)
@@ -23,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
             HandleDeath();
         }
     }
-
+    // Take damage and calculate if health is equal to 0.
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
