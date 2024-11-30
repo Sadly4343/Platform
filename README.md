@@ -33,13 +33,13 @@ https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-155360
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
+
 * [Unity Assets Used]https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-155360
 * [Unity Documentation]https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.html
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
+
 * I want to develop this project further and improve the animations and options to do in the game like adding wall holds and double jump as well as ways to deal with enemies.
 * I want to reorganize the code to be more efficient and work on improving the overall structure of the level design and increase the number of levels for the game with increased complexity.
 * I want to develop further understanding of AI Pathfinding in unity to create more complex enemies that adapt and make the game harder for the player to deal with and more enjoyable in difficulty. 
