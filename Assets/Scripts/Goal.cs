@@ -5,19 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
-    // The scene to load
-    private string Level2;
 
 
     // This method is automatically called when something enters the trigger collider
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         // Log to the console when the trigger is hit
 
         // Check if the object has the tag "Player"
-        if (collision.CompareTag("Player"))
+        if (collider.CompareTag("Player"))
         {
-            Debug.Log("Player reached goal!");
+            //Load the scene Level2 or any level after depending.
             SceneManager.LoadScene(sceneBuildIndex: 1, LoadSceneMode.Single);
         }
     }
