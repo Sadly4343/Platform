@@ -19,9 +19,8 @@ How to play the game
 4. Thank you for reading and playing if chosen to do so.
 The purpose for writing this software was that I chose I wanted to delve deeper into an environment with C# and understand how being able to understand the various aspects of OOP programming through Inheritance, Polymorphism, Encapsulation, and Abstraction. I believe that this project allowed me to do that and gain a better understanding on how I can connect and create software that is designed for the purpose I want it and progress my learning through these projects.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the game being played and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/y478GIxvmUE)
 
 # Development Environment
 
